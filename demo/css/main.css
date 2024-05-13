@@ -72,3 +72,13 @@ file-tree {
   border: 1px solid  #c0c0c0;
   width:350px;
 }
+
+/*
+#file-container {
+  border: 1px solid  #c0c0c0;
+}
+*/
+
+#search-results {
+    height: 100vh;
+}
