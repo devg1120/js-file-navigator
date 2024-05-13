@@ -270,19 +270,15 @@ export class FileTree extends HTMLElement {
   }
 
   async openFileByPath(filePath) {
-    console.log("openFileByPath filePath:",filePath);
     const [_, {handle}] = this.findEntry(filePath, this.currentDirectory);
-    console.log("Handle",handle);
 
     if(handle) {
-      //await this.openFileHandle(handle);
-      await this.openFileHandle({ filePath, handle});
+      await this.openFileHandle(handle);
       this.highlightFile(filePath);
     }
   }
 
   async openFileHandle({path, handle}) {
-    console.log("openFileHandle",handle);
     this.currentFileHandle = handle;
 
     await this.getReadWritePermission(handle);
