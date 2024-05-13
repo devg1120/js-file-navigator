@@ -5,7 +5,7 @@ var inp = document.querySelector("input[type='file']");
 //inp.click();
 inp.addEventListener("change",(event)=>{
     // このあとはevent.target.filesを使って別の処理へ...
-    anyfunction(event.target.files);
+    anyfunction(event.target);
 });
 
 

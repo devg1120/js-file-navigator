@@ -424,6 +424,9 @@ export class FileTree extends HTMLElement {
     try {
 
       this.currentDirectoryHandle = await window.showDirectoryPicker();
+      console.dir(this.currentDirectoryHandle.name);
+      let top = document.querySelector("#topdir");
+      top.textContent = this.currentDirectoryHandle.name;
 
       await this.browseDirectory(this.currentDirectoryHandle);
 
@@ -849,6 +852,7 @@ export class FileTree extends HTMLElement {
   }
 
   async findInFiles(query, config = {matchWholeWord: false, caseSensitive: false, regex: false}) {
+	  console.log("findInFiles");
     if(!this.currentDirectory.hasFileContent) {
       await this.indexFileContent();
     }
