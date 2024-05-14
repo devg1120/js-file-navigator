@@ -417,9 +417,10 @@ export class FileTree extends HTMLElement {
     await this.refresh();
   }
 
-  async duplicateEntry(oldName, newName) {
+  //async duplicateEntry(oldName, newName) {
+  async duplicateEntry(oldName) {
     const [path, {handle, parentHandle, entries}] = this.findEntry(oldName);
-    const name = newName.split('/').pop();
+    const name = '_' + oldName.split('/').pop();
 
     await this.createEntry(parentHandle, {path, handle, entries}, name);
     await this.refresh();
@@ -764,6 +765,7 @@ export class FileTree extends HTMLElement {
         label: `Copy ${entryType}`,
         callback: e => {
           const fullyQualifiedName = domElement.dataset.file || domElement.dataset.dir;
+		console.log(fullyQualifiedName);
           this.duplicateEntry(fullyQualifiedName);
         }
       },

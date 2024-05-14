@@ -1,6 +1,6 @@
 
 #file-container {
- width:100vw;
+ width:50vw;
  height:100vh;
 }
 
@@ -76,7 +76,7 @@ file-tree {
   width:350px;
 }
 
-//input[type='text'] { font-size: 24px; font-family: monospace; }
+/*input[type='text'] { font-size: 24px; font-family: monospace; }  */
 #search-input[type='text'] { 
     font-size: 16px;
     font-family: monospace;
@@ -105,9 +105,11 @@ input {
   border: 1px solid  #c0c0c0;
 }
 */
+
 #search {
-    height: 100vh;
+    height: 100%;
 }
 #search-results {
-    height: 100vh;
+    height: 100%;
+    overflow: scroll;
 }
