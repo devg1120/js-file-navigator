@@ -434,6 +434,12 @@ export class FileTree extends HTMLElement {
   async openDirectory() {
     try {
 
+      let sr = document.querySelector("#search-results");
+
+      while (sr.lastElementChild) {
+	      sr.removeChild(sr.lastElementChild);
+      }
+
       this.currentDirectoryHandle = await window.showDirectoryPicker();
       console.dir(this.currentDirectoryHandle.name);
       //let top = document.querySelector("#topdir");

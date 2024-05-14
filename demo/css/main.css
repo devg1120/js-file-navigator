@@ -64,6 +64,9 @@ file-tree {
 */
 
 #topdir {
+    font-size: 16px;
+    font-family: monospace;
+    font-weight:bold;
    margin: 4px 2px 4px;
    padding: 3px 12px 3px;
   background-color: #fff;
@@ -72,6 +75,25 @@ file-tree {
   border: 1px solid  #c0c0c0;
   width:350px;
 }
+
+//input[type='text'] { font-size: 24px; font-family: monospace; }
+#search-input[type='text'] { 
+    font-size: 16px;
+    font-family: monospace;
+    font-weight:bold;
+    margin: 1px 3px;
+    padding: 5px 13px;
+}
+/*
+#search-input {
+input {
+   height: 130px;
+  background-color: #c8c8c8;
+        font-size: 24px;
+
+
+}
+*/
 
 /*
 #file-container {
@@ -83,6 +105,9 @@ file-tree {
   border: 1px solid  #c0c0c0;
 }
 */
+#search {
+    height: 100vh;
+}
 #search-results {
     height: 100vh;
 }
