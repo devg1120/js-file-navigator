@@ -39,9 +39,16 @@ export class FileTree extends HTMLElement {
           flex-direction: column;
           width: 100%;
         }
-        
+
+        #header {
+          margin: 0px 5px;
+          background-color: #c8c8c8; 
+	}
+
         #file-container {
+          margin: 7px;
           overflow: scroll;
+	  border: 3px solid  #c0c0c0;
         }
         
         material-loader {
@@ -149,7 +156,11 @@ export class FileTree extends HTMLElement {
         <p class="not-supported">
           Unfortunately the File System Access API is not supported on your device.
         </p>
-        <slot name="browse-button"></slot>
+        <div id="header" style="display: flex;">
+         <slot name="browse-button"></slot>
+	 &emsp; 
+         <slot name="browse-path"></slot>
+	</div>
         <div id="file-container">
           <material-loader size="32"></material-loader>
           <ul id="filelist"></ul>       
@@ -425,7 +436,8 @@ export class FileTree extends HTMLElement {
 
       this.currentDirectoryHandle = await window.showDirectoryPicker();
       console.dir(this.currentDirectoryHandle.name);
-      let top = document.querySelector("#topdir");
+      //let top = document.querySelector("#topdir");
+      let top = this.shadowRoot.querySelector('slot[name="browse-path"]').assignedNodes()[0];
       top.textContent = this.currentDirectoryHandle.name;
 
       await this.browseDirectory(this.currentDirectoryHandle);

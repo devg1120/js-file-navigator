@@ -75,14 +75,10 @@ file-tree {
 
 /*
 #file-container {
-  border: 3px solid  #c0c0c0;
-}
-*/
-/*
-#filelist {
   border: 1px solid  #c0c0c0;
 }
 */
+
 #search-results {
     height: 100vh;
 }
