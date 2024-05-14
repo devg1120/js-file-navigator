@@ -43,12 +43,14 @@ export class FileTree extends HTMLElement {
         #header {
           margin: 0px 5px;
           background-color: #c8c8c8; 
+	  position: fixed;                                                                              
 	}
 
         #file-container {
           margin: 7px;
           overflow: scroll;
 	  border: 3px solid  #c0c0c0;
+	  margin: 40px 0px 0px 0px;                                                                        
         }
         
         material-loader {

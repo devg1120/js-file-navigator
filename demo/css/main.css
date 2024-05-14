@@ -5,6 +5,7 @@
 }
 
 #file-content {
+ margin: 40px 0px 0px 0px;
  width:100vw;
  height:100vh;
 }
@@ -113,3 +114,9 @@ input {
     height: 100%;
     overflow: scroll;
 }
+
+
+#file-preview-header {
+    position: fixed;
+}
+
