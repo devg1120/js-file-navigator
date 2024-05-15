@@ -23,8 +23,13 @@ export class FileTree extends HTMLElement {
           --selected-font-color: var(--font-color);
           --width: auto;
           --font-size: .8em;
+	  /*
           --padding-dir: 6px;
           --padding-file: 6px;
+          */
+          --padding-dir:  3px ;
+          --padding-file: 3px ;
+
           display: flex;
           width: var(--width);
           max-width: var(--width);
@@ -76,7 +81,10 @@ export class FileTree extends HTMLElement {
         #filelist ul {
           display: none;
           list-style-type: none;
-          padding: 5px 0 5px 15px;
+
+	  /* 上　右　下 左 */
+          /*padding: 5px 0 5px 15px;*/
+          padding: 5px 0 5px 23px;  /* level indent */
         }
   
         #filelist li {
@@ -87,11 +95,11 @@ export class FileTree extends HTMLElement {
         
         #filelist li.dir {
           align-items: center;
-          padding: var(--padding-dir);
+          padding: var(--padding-dir); 
         }
         
         #filelist li[data-file] {
-          padding: var(--padding-file);
+          padding: var(--padding-file); 
         }
   
         #filelist li:hover {
@@ -107,8 +115,8 @@ export class FileTree extends HTMLElement {
         #filelist li[data-dir] span:not(.arrow) {
           font-weight: bold;
           display: block;
-          padding: 6px;
           white-space: nowrap;
+          padding: var(--padding-file);
         }
         #filelist li[data-dir] .arrow {
           display: inline-block;
@@ -120,21 +128,24 @@ export class FileTree extends HTMLElement {
 
 
           mask-size: var(--font-size);
-          /* -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");*/
 
+          -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");
+
+/*
 	 -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjEgMTJsLTE4IDEydi0yNHoiLz48L3N2Zz4=");
-
+*/
           -webkit-mask-size: var(--font-size);
           background-color: var(--font-color);
           transform: rotate(0deg);
         }
         
         #filelist ul > li[data-file] {
-          margin-left: 17px;
+           margin-left: 17px; 
         }
         
         #filelist ul ~ li[data-file] {
-          margin-left: 25px;
+          /* margin-left: 25px;*/
+          margin-left: 18px;
         }
         
         #filelist li.open + ul {
