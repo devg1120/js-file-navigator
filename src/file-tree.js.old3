@@ -95,7 +95,7 @@ export class FileTree extends HTMLElement {
         
         #filelist li.dir {
           align-items: center;
-           /*padding: var(--padding-dir); */
+          /* padding: var(--padding-dir); */
           padding: 5px;
         }
         

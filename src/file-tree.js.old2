@@ -27,8 +27,8 @@ export class FileTree extends HTMLElement {
           --padding-dir: 6px;
           --padding-file: 6px;
           */
-          --padding-dir:  5px ;
-          --padding-file: 5px ;
+          --padding-dir:  6px ;
+          --padding-file: 6px ;
 
           display: flex;
           width: var(--width);
@@ -95,13 +95,13 @@ export class FileTree extends HTMLElement {
         
         #filelist li.dir {
           align-items: center;
-           /*padding: var(--padding-dir); */
-          padding: 5px;
+          /* padding: var(--padding-dir); */
+          padding: 3px;
         }
         
         #filelist li[data-file] {
           /* padding: var(--padding-file); */
-          padding: 5px;
+          padding: 6px;
         }
   
         #filelist li:hover {
@@ -118,7 +118,7 @@ export class FileTree extends HTMLElement {
           font-weight: bold;
           display: block;
           white-space: nowrap;
-          padding: var(--padding-dir);
+          padding: var(--padding-file);
         }
         #filelist li[data-dir] .arrow {
           display: inline-block;
