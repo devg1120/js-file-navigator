@@ -31,16 +31,13 @@ button {
 
 file-tree {
   --font-family: Roboto, Arial;
-  --font-size: 1rem;
+  --font-size: 0.9rem;
   --hover-color: rgba(2, 147, 232, 0.3);
   --hover-font-color: #000000;
   --selected-color: #0293e8;
   --selected-font-color: #ffffff;
-  --padding-dir: 0 3px;
-  --padding-file: 6px 6px;
-/*  flex-basis: 12%;*/
-/*  margin-top: 20px;*/
 }
+
 
 /*
 #menu ul li a {

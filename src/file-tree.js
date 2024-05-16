@@ -23,13 +23,8 @@ export class FileTree extends HTMLElement {
           --selected-font-color: var(--font-color);
           --width: auto;
           --font-size: .8em;
-	  /*
-          --padding-dir: 6px;
-          --padding-file: 6px;
-          */
-          --padding-dir:  5px ;
-          --padding-file: 5px ;
-
+          --padding-dir:  4px ;
+          --padding-file: 4px ;
           display: flex;
           width: var(--width);
           max-width: var(--width);
@@ -47,15 +42,16 @@ export class FileTree extends HTMLElement {
 
         #header {
           margin: 0px 5px;
-          background-color: #c8c8c8; 
-	  position: fixed;                                                                              
+          /* background-color: #c8c8c8; */
+	  /* position: fixed; */
 	}
 
         #file-container {
           margin: 7px;
           overflow: scroll;
 	  border: 3px solid  #c0c0c0;
-	  margin: 40px 0px 0px 0px;                                                                        
+	  /* margin: 40px 0px 0px 0px;  */
+	  margin: 4px 0px 0px 0px; 
         }
         
         material-loader {
@@ -84,7 +80,8 @@ export class FileTree extends HTMLElement {
 
 	  /* 上　右　下 左 */
           /*padding: 5px 0 5px 15px;*/
-          padding: 5px 0 5px 23px;  /* level indent */
+          /*padding: 5px 0 5px 23px;*/  /* level indent */
+          padding: var(--padding-file) 0  var(--padding-file)  23px;  /* level indent */
         }
   
         #filelist li {
@@ -95,13 +92,11 @@ export class FileTree extends HTMLElement {
         
         #filelist li.dir {
           align-items: center;
-           /*padding: var(--padding-dir); */
-          padding: 5px;
+           padding: var(--padding-dir); 
         }
         
         #filelist li[data-file] {
-          /* padding: var(--padding-file); */
-          padding: 5px;
+           padding: var(--padding-file); 
         }
   
         #filelist li:hover {
