@@ -1,4 +1,6 @@
 import router from './router.js';
+import { marked } from "../../marked/lib/marked.esm.js";
+
 //import {template as index} from '../templates/index.js';
 //import {template as gettingStarted} from '../templates/getting-started.js';
 //import {template as documentation} from '../templates/documentation.js';
@@ -16,6 +18,8 @@ import router from './router.js';
         saveAsButton.disabled = true;
 
         const {type, contents} = detail.file;
+        //console.log("file type:"+ type);
+        //console.dir(detail);
         switch(type) {
           case 'image/png':
           case 'image/jpg':
@@ -28,6 +32,15 @@ import router from './router.js';
             fileContent.innerHTML = contents;
 
             break;
+
+          case '':
+              //console.log("name:", detail.file.name);
+              let name_split = detail.file.name.split('.');
+              //console.log("ext:", name_split[name_split.length-1]);
+              if (name_split[name_split.length-1] == 'md' ) {
+                  fileContent.innerHTML = marked.parse(contents) ;
+                  break;
+	      }
 
           default:
             fileContent.innerHTML = `<textarea>${contents}</textarea>`;
