@@ -23,7 +23,7 @@ export class FileTree extends HTMLElement {
           --selected-font-color: var(--font-color);
           --width: auto;
           --font-size: .8em;
-          --padding-dir:  2px ;
+          --padding-dir:  4px ;
           --padding-file: 4px ;
           display: flex;
           width: var(--width);
